@@ -1,0 +1,49 @@
+@prefix ex: <http://example.org/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+# Films
+<http://example.org/Inception> a dbo:Film ;
+    foaf:name "Inception" ;
+    dbo:director <http://example.org/Christopher_Nolan> ;
+    dbo:starring <http://example.org/Leonardo_DiCaprio> ;
+    dbo:genre <http://example.org/Action_film> ;
+    dbo:abstract "A thief who enters the dreams of others to steal secrets from their subconscious." ;
+    dbo:releaseDate "2010-07-16"^^xsd:date ;
+    dbo:runtime "148"^^xsd:int .
+
+# Acteurs
+<http://example.org/Leonardo_DiCaprio> a dbo:Actor ;
+    foaf:name "Leonardo DiCaprio" ;
+    dbo:abstract "Leonardo Wilhelm DiCaprio is an American actor, producer, and environmentalist." .
+
+# Réalisateur
+<http://example.org/Christopher_Nolan> a dbo:Person ;
+    foaf:name "Christopher Nolan" ;
+    dbo:occupation dbo:Film_director ;
+    dbo:abstract "Christopher Edward Nolan is a British-American film director, producer, and screenwriter." .
+
+# Genres
+<http://example.org/Action_film> a dbo:Genre ;
+    foaf:name "Action" ;
+    dbo:abstract "Action films are characterized by physical action sequences." .
+
+# Utilisateurs
+ex:User1 a ex:User ;
+    ex:userId "1" ;
+    ex:likesActor <http://example.org/Leonardo_DiCaprio> ;
+    ex:likesGenre <http://example.org/Action_film> ;
+    ex:hasRated <http://example.org/Inception> ;
+    ex:rating "5" ;
+    ex:comment "Mind-bending and amazing!" .
+
+ex:User2 a ex:User ;
+    ex:userId "2" ;
+    ex:likesActor <http://example.org/Leonardo_DiCaprio> ;
+    ex:likesGenre <http://example.org/Action_film> ;
+    ex:hasRated <http://example.org/Inception> ;
+    ex:rating "4.5" ;
+    ex:comment "Great, but a bit confusing." .
+
+# Utilisateurs similaires
+ex:User1 ex:similarTo ex:User2 .
