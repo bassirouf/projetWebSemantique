@@ -1,0 +1,45 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ex: <http://example.org/> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/Inception> a dbo:Film ;
+    foaf:name "Inception" ;
+    dbo:director <http://example.org/Christopher_Nolan> ;
+    dbo:genre <http://example.org/Action> ;
+    dbo:releaseDate "2010-07-16"^^xsd:date ;
+    dbo:runtime "148"^^xsd:int ;
+    dbo:starring <http://example.org/Leonardo_DiCaprio>, <http://example.org/Joseph_Gordon_Levitt> ;
+    dbo:abstract "A thief who enters the dreams of others to steal secrets from their subconscious." .
+
+<http://example.org/Christopher_Nolan> a dbo:Person ;
+    foaf:name "Christopher Nolan" ;
+    dbo:occupation dbo:Film_director ;
+    dbo:abstract "Christopher Edward Nolan is a British-American film director, producer, and screenwriter." ;
+    dbo:directed <http://example.org/Inception>, <http://example.org/Interstellar> .
+
+<http://example.org/Leonardo_DiCaprio> a dbo:Actor ;
+    foaf:name "Leonardo DiCaprio" ;
+    dbo:abstract "Leonardo Wilhelm DiCaprio is an American actor, producer, and environmentalist." ;
+    dbo:actedIn <http://example.org/Inception>, <http://example.org/Titanic> .
+
+<http://example.org/Action> a dbo:Genre ;
+    foaf:name "Action" ;
+    dbo:abstract "Action films are characterized by physical action sequences." .
+
+<http://example.org/User1> a ex:User ;
+    ex:userId "1" ;
+    ex:likesActor <http://example.org/Leonardo_DiCaprio> ;
+    ex:likesGenre <http://example.org/Action> ;
+    ex:hasRated <http://example.org/Inception> ;
+    ex:rating "5"^^xsd:float ;
+    ex:comment "Mind-bending and amazing!" .
+
+<http://example.org/User2> a ex:User ;
+    ex:userId "2" ;
+    ex:hasRated <http://example.org/Inception> ;
+    ex:rating "4.5"^^xsd:float ;
+    ex:comment "Great, but a bit confusing." .
+
+<http://example.org/User1> ex:similarTo <http://example.org/User2> .
