@@ -1,0 +1,13 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://dbpedia.org/ontology/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/Inception> a ns1:Film ;
+    ns1:abstract "A thief who enters the dreams of others to steal secrets from their subconscious." ;
+    ns1:director <http://example.org/Christopher_Nolan> ;
+    ns1:genre <http://example.org/Action_film> ;
+    ns1:releaseDate "2010-07-16"^^xsd:date ;
+    ns1:runtime "148"^^xsd:int ;
+    ns1:starring <http://example.org/Leonardo_DiCaprio> ;
+    foaf:name "Inception" .
+

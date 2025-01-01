@@ -1,0 +1,19 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ex="http://example.org/stuff/1.0/">
+  <rdf:Description rdf:about="http://www.example.org/serie.html">
+    <ex:theme>Series</ex:theme>
+    <ex:duree>2H</ex:duree>
+    <ex:tomes>
+      <rdf:Bag>
+        <rdf:_1 rdf:resource="http://www.example.org/tomes/DeadPoolPresident">Dead Pool President</rdf:_1>
+        <rdf:_2 rdf:resource="http://www.example.org/tomes/LesMortsauxtrousses">Les Morts aux trousses</rdf:_2>
+        <rdf:_3 rdf:resource="http://www.example.org/tomes/LaGlairedesEtoiles">La Glaire des étoiles</rdf:_3>
+        <rdf:_4 rdf:resource="http://www.example.org/tomes/Unamidanslebesoin">Un ami dans le besoin</rdf:_4>
+      </rdf:Bag>
+    </ex:tomes>
+    <ex:acteur rdf:resource="http://www.example.org/acteur"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.example.org/acteur">
+    <ex:nom> Wilson</ex:nom>
+    <ex:prenom> Wade </ex:prenom>
+  </rdf:Description>
+</rdf:RDF>
